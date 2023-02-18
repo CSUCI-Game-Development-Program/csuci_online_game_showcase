@@ -1,0 +1,37 @@
+---
+layout: base.liquid  
+pagination: 
+  data: games_list
+  size: 1
+  alias: game
+---
+
+<div>
+
+  <h1>{{ game.title }}</h1>
+  <br>
+  by {{ game.developer }}
+  <p>
+    {{ game.description }}
+    <br>
+    Instructions:
+    {{ game.instructions }}
+  </p>
+
+
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}">Prev</a>
+  {% endif %}
+
+  {%- for pageEntry in pagination.pages %}
+
+    <a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a>
+
+  {%- endfor %}
+
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}">Next</a>
+  {% endif %}
+
+
+</div>
