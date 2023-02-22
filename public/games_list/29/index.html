@@ -10,19 +10,19 @@
       rel="icon"
       type="image/x-icon" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous">
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous" />
     <link rel="stylesheet" href="/style.css">
   </head>
-  <body>
+  <body id="body" class="dark-mode">
     <header class="page-header">
   <div class="container">
     <div class="page-header__content">
       <nav class="navbar navbar-expand-lg bg-primary navbar-light py-3 fixed-top" style="background-color: #e3f2fd;">
         <div class="container">
-          <a href="#" class="navbar-brand">
+          <a href="/" class="navbar-brand">
             <img
               src="/assets/img/csuci-logo.png"
               alt="CSUCI Logo"
@@ -63,15 +63,17 @@
       
 <div class="section container">
   <h1 class="section-title">Life Is A Bit Feudal</h1>
-  <br>
-  by Samantha Lucero
-  <p>
-    You are a farmer girl during medieval times going into town to sell your harvest. When you get there, though, the town is burned down! Now you must help put the village back together.
-    <br>
-    Instructions:
-    You simply use the arrow keys to walk around, and run into to objects/people to interact with them.
-  </p>
-
+  <div class="game-description">
+    <span class="student-name">
+      by Samantha Lucero
+    </span>
+    <p>
+      You are a farmer girl during medieval times going into town to sell your harvest. When you get there, though, the town is burned down! Now you must help put the village back together.
+      <br>
+      Instructions:
+      You simply use the arrow keys to walk around, and run into to objects/people to interact with them.
+    </p>
+  </div>
   <div class="text-center">
     
       <a class="gradient-btn" href="/games_list/28/">Prev</a>
@@ -155,6 +157,7 @@
 
       <a href=""></a>
     &nbsp;
+    &nbsp;
     
       <a class="gradient-btn" href="/games_list/30/">Next</a>
     
@@ -173,6 +176,7 @@
   <br>
   <p>© 2023 CSUCI. All rights reserved.</p>
 </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

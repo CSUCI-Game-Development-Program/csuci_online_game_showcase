@@ -10,19 +10,19 @@
       rel="icon"
       type="image/x-icon" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous">
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous" />
     <link rel="stylesheet" href="/style.css">
   </head>
-  <body>
+  <body id="body" class="dark-mode">
     <header class="page-header">
   <div class="container">
     <div class="page-header__content">
       <nav class="navbar navbar-expand-lg bg-primary navbar-light py-3 fixed-top" style="background-color: #e3f2fd;">
         <div class="container">
-          <a href="#" class="navbar-brand">
+          <a href="/" class="navbar-brand">
             <img
               src="/assets/img/csuci-logo.png"
               alt="CSUCI Logo"
@@ -63,15 +63,17 @@
       
 <div class="section container">
   <h1 class="section-title">Shore Cleanin’</h1>
-  <br>
-  by Frances Zercher
-  <p>
-    The gameplay consists of controlling a young girl who visits a polluted beach and the main objective is to collect all the trash on the sand to restore the beach to its previous state. The interesting thing is that there are many side quests such as retrieving eggs for animals or collecting seashells. To enter a new area of the beach, the player must go to the area where the arrow is pointing.
-    <br>
-    Instructions:
-    N/A
-  </p>
-
+  <div class="game-description">
+    <span class="student-name">
+      by Frances Zercher
+    </span>
+    <p>
+      The gameplay consists of controlling a young girl who visits a polluted beach and the main objective is to collect all the trash on the sand to restore the beach to its previous state. The interesting thing is that there are many side quests such as retrieving eggs for animals or collecting seashells. To enter a new area of the beach, the player must go to the area where the arrow is pointing.
+      <br>
+      Instructions:
+      N/A
+    </p>
+  </div>
   <div class="text-center">
     
       <a class="gradient-btn" href="/games_list/37/">Prev</a>
@@ -155,6 +157,7 @@
 
       <a href=""></a>
     &nbsp;
+    &nbsp;
     
   </div>
 
@@ -171,6 +174,7 @@
   <br>
   <p>© 2023 CSUCI. All rights reserved.</p>
 </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

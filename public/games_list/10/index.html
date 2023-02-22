@@ -10,19 +10,19 @@
       rel="icon"
       type="image/x-icon" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous">
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous" />
     <link rel="stylesheet" href="/style.css">
   </head>
-  <body>
+  <body id="body" class="dark-mode">
     <header class="page-header">
   <div class="container">
     <div class="page-header__content">
       <nav class="navbar navbar-expand-lg bg-primary navbar-light py-3 fixed-top" style="background-color: #e3f2fd;">
         <div class="container">
-          <a href="#" class="navbar-brand">
+          <a href="/" class="navbar-brand">
             <img
               src="/assets/img/csuci-logo.png"
               alt="CSUCI Logo"
@@ -63,15 +63,17 @@
       
 <div class="section container">
   <h1 class="section-title">Dusty</h1>
-  <br>
-  by Roxanna Pinotti
-  <p>
-    You: a stranded spacewalker with a spaceship low on fuel. The only way out: collecting space dust to fill ‘er back up again. Your objective is to traverse the deep space and its planets to find this fuel, all the while coming across and conversing with some amusing – and questionable – aliens.
-    <br>
-    Instructions:
-    The arrow keys are needed to collect and interact with objects and sprites. For those looking to speed-run the game, the majority of solo sprites double as markers for the entry and exit points, and each interaction’s end will specify which direction you can go in. Also, avoid returning to the cockpit before collecting the space dust otherwise your progress will be lost, and the space dust count will revert to zero. Finally, don’t be too hasty as there’s a small easter egg in the game for Star Wars fans!
-  </p>
-
+  <div class="game-description">
+    <span class="student-name">
+      by Roxanna Pinotti
+    </span>
+    <p>
+      You: a stranded spacewalker with a spaceship low on fuel. The only way out: collecting space dust to fill ‘er back up again. Your objective is to traverse the deep space and its planets to find this fuel, all the while coming across and conversing with some amusing – and questionable – aliens.
+      <br>
+      Instructions:
+      The arrow keys are needed to collect and interact with objects and sprites. For those looking to speed-run the game, the majority of solo sprites double as markers for the entry and exit points, and each interaction’s end will specify which direction you can go in. Also, avoid returning to the cockpit before collecting the space dust otherwise your progress will be lost, and the space dust count will revert to zero. Finally, don’t be too hasty as there’s a small easter egg in the game for Star Wars fans!
+    </p>
+  </div>
   <div class="text-center">
     
       <a class="gradient-btn" href="/games_list/9/">Prev</a>
@@ -155,6 +157,7 @@
 
       <a href=""></a>
     &nbsp;
+    &nbsp;
     
       <a class="gradient-btn" href="/games_list/11/">Next</a>
     
@@ -173,6 +176,7 @@
   <br>
   <p>© 2023 CSUCI. All rights reserved.</p>
 </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
