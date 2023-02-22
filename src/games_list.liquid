@@ -1,14 +1,14 @@
 ---
 layout: base.liquid  
+title: Games
 pagination: 
   data: games_list
   size: 1
   alias: game
 ---
 
-<div>
-
-  <h1>{{ game.title }}</h1>
+<div class="section container">
+  <h1 class="section-title">{{ game.title }}</h1>
   <br>
   by {{ game.developer }}
   <p>
@@ -18,20 +18,21 @@ pagination:
     {{ game.instructions }}
   </p>
 
+  <div class="text-center">
+    {% if pagination.href.previous %}
+      <a class="gradient-btn" href="{{ pagination.href.previous }}">Prev</a>
+    {% endif %}
 
-  {% if pagination.href.previous %}
-    <a href="{{ pagination.href.previous }}">Prev</a>
-  {% endif %}
+    {%- for pageEntry in pagination.pages %}
 
-  {%- for pageEntry in pagination.pages %}
+      <a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a>
 
-    <a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a>
-
-  {%- endfor %}
-
-  {% if pagination.href.next %}
-    <a href="{{ pagination.href.next }}">Next</a>
-  {% endif %}
+    {%- endfor %}
+    &nbsp;
+    {% if pagination.href.next %}
+      <a class="gradient-btn" href="{{ pagination.href.next }}">Next</a>
+    {% endif %}
+  </div>
 
 
 </div>
