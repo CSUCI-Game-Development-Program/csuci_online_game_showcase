@@ -1,10 +1,11 @@
 ---
 layout: base.liquid  
-title: Games List
+title: Games
 pagination: 
-  data: games_list
+  data: games
   size: 1
   alias: game
+permalink: "/games/{{ game.title | slugify }}.html"
 ---
 
 <div class="section container">
