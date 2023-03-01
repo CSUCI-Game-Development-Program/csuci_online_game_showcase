@@ -14,20 +14,21 @@
       rel="stylesheet"
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="/style.css">
   </head>
-  <body id="body" class="dark-mode">
+  <body>
     <header class="page-header">
   <div class="container">
     <div class="page-header__content">
-      <nav class="navbar navbar-expand-lg bg-primary navbar-light py-3 fixed-top" style="background-color: #e3f2fd;">
+      <nav class="navbar navbar-expand-lg navbar-dark py-3 fixed-top">
         <div class="container">
           <a href="/" class="navbar-brand">
             <img
-              src="/assets/img/csuci-logo.png"
+              src="/assets/img/ci-logo-white.png"
               alt="CSUCI Logo"
-              width="70"
-              height="40">
+              width="150"
+              height="25">
           </a>
 
           <button
@@ -44,7 +45,7 @@
                 <a href="/" class="nav-link">Home</a>
               </li>
               <li class="nav-item">
-                <a href="/games_list/" class="nav-link">Games</a>
+                <a href="/games/" class="nav-link">Games</a>
               </li>
               <li class="nav-item">
                 <a href="/blog/" class="nav-link">Blog</a>
@@ -60,47 +61,120 @@
   </div>
 </header>
     <main>
-      <section class="hero">
-  <div class="container flow">
-    <div class="hero__content flow">
-      <h1 class="section-title">News</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      <p>Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?</p>
-      <div class="flex-group">
-        <a class="frame-btn" href="#featured-articles">
-          <span class="frame-btn__outline frame-btn__outline--tall">
-            <span class="frame-btn__line frame-btn__line--tall"></span>
-            <span class="frame-btn__line frame-btn__line--flat"></span>
-          </span>
-          <span class="frame-btn__outline frame-btn__outline--flat">
-            <span class="frame-btn__line frame-btn__line--tall"></span>
-            <span class="frame-btn__line frame-btn__line--flat"></span>
-          </span>
-          <span class="frame-btn__solid"></span>
-          <span class="frame-btn__text">Featured Articles</span>
-        </a>
-        <a class="frame-btn" href="/blog/">
-          <span class="frame-btn__outline frame-btn__outline--tall">
-            <span class="frame-btn__line frame-btn__line--tall"></span>
-            <span class="frame-btn__line frame-btn__line--flat"></span>
-          </span>
-          <span class="frame-btn__outline frame-btn__outline--flat">
-            <span class="frame-btn__line frame-btn__line--tall"></span>
-            <span class="frame-btn__line frame-btn__line--flat"></span>
-          </span>
-          <span class="frame-btn__solid"></span>
-          <span class="frame-btn__text">Most Recent Articles</span>
-        </a>
+      <div
+  class="carousel slide"
+  data-bs-ride="carousel"
+  id="carouselExampleIndicators">
+  <div class="carousel-indicators">
+    <button
+      aria-label="Slide 1"
+      class="active"
+      data-bs-slide-to="0"
+      data-bs-target="#carouselExampleIndicators"
+      type="button"></button>
+    <button
+      aria-label="Slide 2"
+      data-bs-slide-to="1"
+      data-bs-target="#carouselExampleIndicators"
+      type="button"></button>
+    <button
+      aria-label="Slide 3"
+      data-bs-slide-to="2"
+      data-bs-target="#carouselExampleIndicators"
+      type="button"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        alt="..."
+        class="c-img"
+        src="/assets/img/landscape-1.jpg">
+      <div class="carousel-caption">
+        <h5>Welcome</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
+        <p>
+          <a class="frame-btn" href="#featured-articles">
+            <span class="frame-btn__outline frame-btn__outline--tall">
+              <span class="frame-btn__line frame-btn__line--tall"></span>
+              <span class="frame-btn__line frame-btn__line--flat"></span>
+            </span>
+            <span class="frame-btn__outline frame-btn__outline--flat">
+              <span class="frame-btn__line frame-btn__line--tall"></span>
+              <span class="frame-btn__line frame-btn__line--flat"></span>
+            </span>
+            <span class="frame-btn__solid"></span>
+            <span class="frame-btn__text">Featured Articles</span>
+          </a>
+        </p>
       </div>
     </div>
-    <div>
+    <div class="carousel-item">
       <img
-        src="/assets/img/landscape-2.jpg"
-        alt=""
-        class="hero__image">
+        alt="..."
+        class="c-img"
+        src="/assets/img/digital.jpg">
+      <div class="carousel-caption">
+        <h5>News & Blog</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
+        <p>
+          <a class="frame-btn" href="#">
+            <span class="frame-btn__outline frame-btn__outline--tall">
+              <span class="frame-btn__line frame-btn__line--tall"></span>
+              <span class="frame-btn__line frame-btn__line--flat"></span>
+            </span>
+            <span class="frame-btn__outline frame-btn__outline--flat">
+              <span class="frame-btn__line frame-btn__line--tall"></span>
+              <span class="frame-btn__line frame-btn__line--flat"></span>
+            </span>
+            <span class="frame-btn__solid"></span>
+            <span class="frame-btn__text">Learn More</span>
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img
+        alt="..."
+        class="c-img"
+        src="/assets/img/laptop.jpg">
+      <div class="carousel-caption">
+        <h5>Games</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
+        <p>
+          <a class="frame-btn" href="#">
+            <span class="frame-btn__outline frame-btn__outline--tall">
+              <span class="frame-btn__line frame-btn__line--tall"></span>
+              <span class="frame-btn__line frame-btn__line--flat"></span>
+            </span>
+            <span class="frame-btn__outline frame-btn__outline--flat">
+              <span class="frame-btn__line frame-btn__line--tall"></span>
+              <span class="frame-btn__line frame-btn__line--flat"></span>
+            </span>
+            <span class="frame-btn__solid"></span>
+            <span class="frame-btn__text">Learn More</span>
+          </a>
+        </p>
+      </div>
     </div>
   </div>
-</section>
+  <button
+    class="carousel-control-prev"
+    data-bs-slide="prev"
+    data-bs-target="#carouselExampleIndicators"
+    type="button">
+    <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    data-bs-slide="next"
+    data-bs-target="#carouselExampleIndicators"
+    type="button">
+    <span aria-hidden="true" class="carousel-control-next-icon"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
 
 <section id="featured-articles" class="featured-articles">
   <div class="container flow">
@@ -122,7 +196,7 @@
             <span>Apr 30, 2023</span>
           </p>
           <p class="snippet__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?</p>
-          <a href="/blog/first-article/" class="btn btn--primary">Continue Reading</a>
+          <a href="/blog/first-article/" class="gradient-btn">Continue Reading</a>
         </article>
       </li>
       <li>
@@ -140,7 +214,7 @@
             <span>May 14, 2023</span>
           </p>
           <p class="snippet__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?</p>
-          <a href="/blog/second-article/" class="btn btn--primary">Continue Reading</a>
+          <a href="/blog/second-article/" class="gradient-btn">Continue Reading</a>
         </article>
       </li>
       <li>
@@ -158,7 +232,7 @@
             <span>May 27, 2023</span>
           </p>
           <p class="snippet__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?</p>
-          <a href="/blog/third-article/" class="btn btn--primary">Continue Reading</a>
+          <a href="/blog/third-article/" class="gradient-btn">Continue Reading</a>
         </article>
       </li>
       <li>
@@ -176,7 +250,7 @@
             <span>Jun 14, 2023</span>
           </p>
           <p class="snippet__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?</p>
-          <a href="/blog/fourth-article/" class="btn btn--primary">Continue Reading</a>
+          <a href="/blog/fourth-article/" class="gradient-btn">Continue Reading</a>
         </article>
       </li>
       <li>
@@ -194,7 +268,7 @@
             <span>Jun 14, 2023</span>
           </p>
           <p class="snippet__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?</p>
-          <a href="/blog/fifth-article/" class="btn btn--primary">Continue Reading</a>
+          <a href="/blog/fifth-article/" class="gradient-btn">Continue Reading</a>
         </article>
       </li>
     </ul>
@@ -204,13 +278,31 @@
     <footer class="site-footer">
   <img
     class="logo"
-    src="/assets/img/csuci-logo.png"
-    width="70"
-    height="40"
-    alt="">
+    src="/assets/img/ci-logo-white-ii.png"
+    width="120"
+    height="75"
+    alt="CI Logo Version 2">
   <br>
   <p>© 2023 CSUCI. All rights reserved.</p>
 </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        let table = new DataTable('#example');
+      });
+    </script>
+    <script>
+      const navEl = document.querySelector('.navbar');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY >= 56) {
+          navEl.classList.add('navbar-scrolled');
+        } else if (window.scrollY < 56) {
+          navEl.classList.remove('navbar-scrolled')
+        }
+      });
+    </script>
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
