@@ -81,11 +81,6 @@ body {
   line-height: 1.5;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
 /* Make images easier to work with */
 img,
 picture {
@@ -99,22 +94,6 @@ button,
 textarea,
 select {
   font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }
 
 body {
@@ -165,7 +144,7 @@ section,
   text-align: center;
 }
 
-/* typgraphy */
+/* typography */
 
 .article-title,
 .section-title {
@@ -204,11 +183,36 @@ section,
   text-decoration: none;
 }
 
+.nav-link:hover {
+  color: white !important;
+}
+
 .nav-list a:focus,
 .nav-list a:hover {
   color: var(--clr-primary-200);
   text-decoration: underline;
 }
+
+/* Bootstrap Nav Hover Effect 
+.nav-link{
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  opacity: 0;
+  transition: all 0.2s;
+  height: 2px;
+  width: 100%;
+  background-color: #e51a38;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+}
+*/
 
 .navbar {
   transition: all 0.5s;
@@ -565,12 +569,33 @@ section,
   color: #fff !important;
 }
 
+
+.hero{
+  background-color: var(--clr-neutral-900);
+}
+.hero > div {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  gap: 3em;
+}
+
+@media (min-width: 45em) {
+  .hero > div {
+    grid-auto-flow: column;
+  }
+}
+
+
+
+
 .select {
   color: #fff;
 }
 
 .list {
-  margin-top: 12rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
@@ -578,12 +603,25 @@ section,
   color: #fff !important;
 }
 
+/*Game Landing Page*/
+
+.game-link {
+  text-decoration: none;
+}
+
+.center-heading {
+  margin: auto;
+}
 
 /* Game List Page */
 .student-name{
   color: grey;
 }
 
-.game-description{
+.game-info {
   margin-top: 36em;
+  color: #fff;
 }
+
+
+

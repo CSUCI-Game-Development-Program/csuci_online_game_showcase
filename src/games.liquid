@@ -4,32 +4,30 @@ title: Games
 data: games
 alias: game
 ---
-
 <section class="landing">
-  <div class="container list">
-    <div class="row">
-      <div class="col-md-12">
-        <table id="all-games" class="table">
-          <thead>
+  <h3 class="text-center">- Collections -</h3>
+  <div class="container row list">
+    <div class="col-md-12">
+      <table id="all-games" class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Environment</th>
+          </tr>
+        </thead>
+        {% for game in games %}
+          <tbody>
             <tr>
-              <th>Title</th>
-              <th>Date</th>
-              <th>Environment</th>
+              <td>
+                <a href="/games/{{ game.title | slugify }}.html" class="game-link">{{ game.title }}</a>
+              </td>
+              <td>{{ game.date_submitted }}</td>
+              <td>{{ game.environment }}</td>
             </tr>
-          </thead>
-          {% for game in games %}
-            <tbody>
-              <tr>
-                <td>
-                  <a href="/games/{{ game.title | slugify }}.html">{{ game.title }}</a>
-                </td>
-                <td>{{ game.date_submitted }}</td>
-                <td>{{ game.environment }}</td>
-              </tr>
-            </tbody>
-          {% endfor %}
-        </table>
-      </div>
+          </tbody>
+        {% endfor %}
+      </table>
     </div>
   </div>
 </section>
