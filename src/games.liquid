@@ -4,9 +4,27 @@ title: Games
 data: games
 alias: game
 ---
+
 <section class="landing">
-  <h3 class="text-center">- Collections -</h3>
-  <div class="container row list">
+<h3 class="text-center">- Collections -</h3>
+
+<div class="container row list">
+  <div class="col-md-4">
+  <div class="card border-secondary"> 
+  <img class="card-img-top" src="/assets/img/landscape-2.jpg" alt="Card image cap">
+    {% for game in games %}
+  <div class="card-body">
+  <h5 class="card-title"><a href="/games/{{ game.title | slugify }}.html" class="game-link">{{ game.title }}
+  </a></h5>
+  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <a href="#" class="gradient-btn">Go somewhere</a>
+</div>
+    {% endfor %}
+</div>
+</div>
+</div>
+
+<div class="container">
     <div class="col-md-12">
       <table id="all-games" class="table">
         <thead>
@@ -30,4 +48,7 @@ alias: game
       </table>
     </div>
   </div>
+
+
+
 </section>

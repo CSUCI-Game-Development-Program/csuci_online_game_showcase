@@ -193,7 +193,7 @@ section,
   text-decoration: underline;
 }
 
-/* Bootstrap Nav Hover Effect 
+/*
 .nav-link{
   position: relative;
 }
@@ -317,7 +317,7 @@ section,
   background-color: var(--clr-neutral-900);
 }
 
-.articles__list {
+.articles-list {
   --flow-spacer: 3rem;
   margin: 6rem 0;
 }
@@ -360,6 +360,8 @@ section,
 .snippet__title {
   grid-area: title;
 }
+
+
 .snippet__meta {
   grid-area: meta;
   color: var(--clr-neutral-300);
@@ -562,36 +564,26 @@ section,
   transition: 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/*Game Landing*/
+
+/*Game Landing Page*/
 
 .landing {
   background-color: var(--clr-neutral-900);
   color: #fff !important;
 }
 
-
-.hero{
-  background-color: var(--clr-neutral-900);
-}
-.hero > div {
-  display: grid;
-  grid-auto-flow: row;
-  grid-auto-columns: 1fr;
-  align-items: center;
-  gap: 3em;
+.center-heading {
+  margin: auto;
 }
 
-@media (min-width: 45em) {
-  .hero > div {
-    grid-auto-flow: column;
-  }
+.card {
+  background-color: transparent;
+  display: flex;
+  width: 18rem;
 }
 
-
-
-
-.select {
-  color: #fff;
+.game-link {
+  text-decoration: none;
 }
 
 .list {
@@ -603,17 +595,8 @@ section,
   color: #fff !important;
 }
 
-/*Game Landing Page*/
+/* Individual Games List Page */
 
-.game-link {
-  text-decoration: none;
-}
-
-.center-heading {
-  margin: auto;
-}
-
-/* Game List Page */
 .student-name{
   color: grey;
 }
@@ -623,5 +606,15 @@ section,
   color: #fff;
 }
 
+/* About Us */
 
+.about-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+}
 
+.about-txt {
+  text-indent: 30px;
+}
