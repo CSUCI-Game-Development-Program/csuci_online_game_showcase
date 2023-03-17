@@ -1,21 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
 
-/*.btn-primary{
-  background-color:#e51a38 !important;
-  border-color:#e51a38;
-}*/
-.btn-primary, .btn-primary:visited {
-    background-color: #e51a38 !important;
-    border-color: #e51a38;
-}
-
-.btn-primary:hover {
-  background-color: #fff !important;
-  border-color: #fff;
-  color: #e51a38;
-}
-
-
 :root {
   --fs-300: 0.9375rem;
   --fs-400: 1.0625rem;
@@ -160,7 +144,7 @@ section,
   text-align: center;
 }
 
-/* typography */
+/* Typography */
 
 .article-title,
 .section-title {
@@ -175,6 +159,9 @@ section,
   font-size: var(--fs-600);
 }
 
+.center-heading {
+  margin: auto;
+}
 
 /* //////////////////////
   Header
@@ -209,50 +196,11 @@ section,
   text-decoration: underline;
 }
 
-/* Bootstrap Nav Hover Effect 
-.nav-link{
-  position: relative;
-}
-.nav-link::after {
-  content: '';
-  opacity: 0;
-  transition: all 0.2s;
-  height: 2px;
-  width: 100%;
-  background-color: #e51a38;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.nav-link:hover::after {
-  opacity: 1;
-}
-*/
-
 .navbar {
   transition: all 0.5s;
 }
 .navbar-scrolled {
   background-color: var(--clr-neutral-900);;
-}
-
- .logo {
-  margin: 0 auto;
-  display: block;
- }
- 
-/* //////////////////////
-  Footer
-  /////////////////////// */
-
-.site-footer {
-  --logo-color: currentColor;
-  padding: 2em 0;
-  margin-top: auto;
-  color: var(--clr-neutral-100);
-  background-color: var(--clr-primary-500);
-  text-align: center;
 }
 
 /* //////////////////////
@@ -337,6 +285,28 @@ section,
   --flow-spacer: 3rem;
   margin: 6rem 0;
 }
+
+/* //////////////////////
+  Footer
+  /////////////////////// */
+
+  .site-footer {
+    padding: 1.75em 0;
+    margin: 0;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-primary-500);
+    text-align: center;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    margin: 0 auto;
+    display: block;
+   }
+
 
 /* //////////////////////
   Individual article page
@@ -585,27 +555,6 @@ section,
   color: #fff !important;
 }
 
-
-.hero{
-  background-color: var(--clr-neutral-900);
-}
-.hero > div {
-  display: grid;
-  grid-auto-flow: row;
-  grid-auto-columns: 1fr;
-  align-items: center;
-  gap: 3em;
-}
-
-@media (min-width: 45em) {
-  .hero > div {
-    grid-auto-flow: column;
-  }
-}
-
-
-
-
 .select {
   color: #fff;
 }
@@ -619,8 +568,6 @@ section,
   color: #fff !important;
 }
 
-/*Game Landing Page*/
-
 .game-link {
   text-decoration: none;
 }
@@ -629,12 +576,66 @@ section,
   margin: auto;
 }
 
+  /*.btn-primary{
+  background-color:#e51a38 !important;
+  border-color:#e51a38;
+  }*/
+
+.btn-primary, .btn-primary:visited {
+  background-color: #e51a38 !important;
+  border-color: #e51a38;
+}
+
+.btn-primary:hover {
+background-color: #fff !important;
+border-color: #fff;
+color: #e51a38;
+}
+
 /* Game List Page */
+
 .student-name{
   color: grey;
 }
 
 .game-info {
-  margin-top: 36em;
+  margin-top: 2em;
   color: #fff;
 }
+
+.title-and-author{
+  text-align: center;
+}
+
+.game-name {
+  margin-bottom: .1em;
+}
+
+.description {
+  margin-top: 1em;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+/*About List Page */
+
+.about-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em;
+}
+
+.about-txt {
+  text-indent: 30px;
+}
+ 
+/* Blog */
+
+.blog-heading{
+  margin-bottom: 1em;
+}
+

@@ -7,9 +7,8 @@ pagination:
   alias: game
 permalink: "/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.html"
 ---
-<section class="landing" ;>
+<section class="landing">
   <div class="section container">
-    <h1>{{ game.title }}</h1>
     <div class="game-info">
       <iframe
         src="../browser_games/{{ game.filename }}.html"
@@ -18,10 +17,13 @@ permalink: "/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.htm
         width="600"
         title="{{ game.title }}"></iframe>
       <br>
+      <div class="title-and-author">
+      <h1 class="game-name">{{ game.title }}</h1>
       <span class="student-name">
         by {{ game.developer }}
       </span>
-      <p>
+      </div>
+      <p class="description">
         {{ game.description }}
         <br>
         Instructions:
