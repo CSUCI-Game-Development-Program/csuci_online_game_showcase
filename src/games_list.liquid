@@ -5,12 +5,19 @@ pagination:
   data: games
   size: 1
   alias: game
-permalink: "/games/{{ game.title | slugify }}.html"
+permalink: "/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.html"
 ---
-<section class="landing">
+<section class="landing" ;>
   <div class="section container">
-    <h1 class="section-title">{{ game.title }}</h1>
+    <h1>{{ game.title }}</h1>
     <div class="game-info">
+      <iframe
+        src="../browser_games/{{ game.filename }}.html"
+        style="border:2px solid red;"
+        height="600"
+        width="600"
+        title="{{ game.title }}"></iframe>
+      <br>
       <span class="student-name">
         by {{ game.developer }}
       </span>
@@ -25,12 +32,6 @@ permalink: "/games/{{ game.title | slugify }}.html"
       {% if pagination.href.previous %}
         <a class="gradient-btn" href="{{ pagination.href.previous }}">Prev</a>
       {% endif %}
-
-      {%- for pageEntry in pagination.pages %}
-
-        <a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a>
-
-      {%- endfor %}
       &nbsp;
       &nbsp;
       {% if pagination.href.next %}
