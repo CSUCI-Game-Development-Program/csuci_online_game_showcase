@@ -9,15 +9,13 @@ permalink: "/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.htm
 ---
 <section class="landing">
   <div class="section container">
-    <div class="game-info">
+    <div class="iframe-container">
       <iframe
         src="../browser_games/{{ game.filename }}.html"
-        style="border:2px solid red;"
-        height="600"
-        width="600"
         title="{{ game.title }}"></iframe>
+        </div>
       <br>
-      <div class="title-and-author">
+      <div class="name-and-author">
       <h1 class="game-name">{{ game.title }}</h1>
       <span class="student-name">
         by {{ game.developer }}
@@ -26,18 +24,17 @@ permalink: "/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.htm
       <p class="description">
         {{ game.description }}
         <br>
+        <br>
         Instructions:
         {{ game.instructions }}
       </p>
     </div>
     <div class="text-center">
       {% if pagination.href.previous %}
-        <a class="gradient-btn" href="{{ pagination.href.previous }}">Prev</a>
+        <a class="neon-button" href="{{ pagination.href.previous }}">Previous</a>
       {% endif %}
-      &nbsp;
-      &nbsp;
       {% if pagination.href.next %}
-        <a class="gradient-btn" href="{{ pagination.href.next }}">Next</a>
+        <a class="neon-button" href="{{ pagination.href.next }}">Next</a>
       {% endif %}
     </div>
   </div>
