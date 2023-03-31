@@ -7,9 +7,8 @@ alias: game
 
 <section class="landing">
   <h2 class="text-center">- Collections -</h2>
-  <div class="row"></div>
-  <div class="container row list">
-    <div class="col-md-6">
+  <div class="container row list collections">
+    <div class="col-md-4">
     <input type="text" class="form-control" id="searchInput" onkeyup="searchTable()" placeholder="Search...">
     <br>
     </div>
@@ -26,19 +25,19 @@ alias: game
         <tbody>
           {% for game in games %}
             <tr>
+          
               <td>
               <a href="/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.html" class="game-link">{{ game.title }}</a>
               </td>
               <td>{{ game.developer }}</td>
               <td>{{ game.datesubmitted }}</td>
-              <td>{{ game.environment }}</td>
+              <td>{{ game.environment }}</td>       
             </tr>
           {% endfor %}
         </tbody>
       </table>
-  </div>
-    </div>
-  </div>
+      </div>
+     </div>
 </section>
 
 
