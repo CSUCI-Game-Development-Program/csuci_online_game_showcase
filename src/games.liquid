@@ -9,46 +9,61 @@ alias: game
   <h2 class="text-center">- Collections -</h2>
   <div class="container row list collections">
     <div class="col-md-4">
-    <input type="text" class="form-control" id="searchInput" onkeyup="searchTable()" placeholder="Search...">
-    <br>
+      <input
+        type="text"
+        class="form-control"
+        id="searchInput"
+        onkeyup="searchTable()"
+        placeholder="Search...">
+      <br>
     </div>
     <div class="col-md-12">
       <table id="gameTableBody" class="table">
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Developer</th>
-          <th>Date</th>
-          <th>Environment</th>
-        </tr>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Developer</th>
+            <th>Date</th>
+            <th>Environment</th>
+            <th>Game File</th>
+          </tr>
         </thead>
         <tbody>
           {% for game in games %}
-            <tr>
-          
+            <tr class="link-row">
               <td>
-              <a href="/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.html" class="game-link">{{ game.title }}</a>
+                <a href="/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.html" class="game-link">
+                  <ul>{{ game.title }}</ul>
+                </a>
               </td>
               <td>{{ game.developer }}</td>
               <td>{{ game.datesubmitted }}</td>
-              <td>{{ game.environment }}</td>       
+              <td>{{ game.environment }}</td>
+              <td>
+                <button class="btn-link-row">
+                  <a href="/public/browser_games/{{ game.filename }}.html" download>Download</a>
+                </button>
+              </td>
             </tr>
           {% endfor %}
         </tbody>
       </table>
-      </div>
-     </div>
+    </div>
+  </div>
 </section>
 
-
 <!-- Bootstrap JS and jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
   function searchTable() {
-
-// Declare variables
-    var input, filter, table, tr, td, i, txtValue, rowCount;
+    var input,
+      filter,
+      table,
+      tr,
+      td,
+      i,
+      txtValue,
+      rowCount;
 
     input = document.getElementById("searchInput");
     filter = input.value.toUpperCase();
@@ -81,30 +96,40 @@ alias: game
       }
     }
   }
+
   document.addEventListener('DOMContentLoaded', function() {
-    // Show only the first 20 rows of the table
+
+// Show only the first 20 rows of the table
     const gameTableBodyRows = document.querySelectorAll('#gameTableBody tr');
     for (let i = 15; i < gameTableBodyRows.length; i++) {
       gameTableBodyRows[i].style.display = 'none';
     }
-  
-    // Add "Show More" button
-    const showMoreButton = document.createElement('button');
-    showMoreButton.classList.add('btn', 'btn-primary');
-    showMoreButton.textContent = 'Show More';
-    showMoreButton.addEventListener('click', function() {
-      const hiddenRows = document.querySelectorAll('#gameTableBody tr:not([style*="display: table-row"])');
-      const numToShow = hiddenRows.length > 20 ? 20 : hiddenRows.length;
-      for (let i = 0; i < numToShow; i++) {
-        hiddenRows[i].style.display = 'table-row';
+
+// Add onscroll event listener to window object
+    window.addEventListener('scroll', function() {
+      const showMoreButton = document.getElementById('showMoreButton');
+      if (showMoreButton) {
+        const hiddenRows = document.querySelectorAll('#gameTableBody tr:not([style*="display: table-row"])');
+        if (hiddenRows.length > 0 && window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+          const numToShow = hiddenRows.length > 20
+            ? 20
+            : hiddenRows.length;
+          for (let i = 0; i < numToShow; i++) {
+            hiddenRows[i].style.display = 'table-row';
+          }
+          const buttonText = hiddenRows.length > numToShow
+            ? 'Scroll down'
+            : 'End';
+          showMoreButton.textContent = buttonText;
+        }
       }
-      const buttonText = hiddenRows.length > numToShow ? 'Show More' : 'End';
-      showMoreButton.textContent = buttonText;
     });
-  
+
+// Add "Show More" button
+    const showMoreButton = document.createElement('button');
+    showMoreButton.id = 'showMoreButton';
+    showMoreButton.classList.add('btn', 'btn-inv', 'btn-primary');
+    showMoreButton.textContent = 'Scroll';
     document.querySelector('.list').appendChild(showMoreButton);
   });
-  
-
-  
 </script>
