@@ -17,8 +17,11 @@ alias: game
         placeholder="Search...">
       <br>
     </div>
-    <div class="col-md-12">
+
+    <!--Bootstrap 5.0 Cards-->
       <table id="gameTableBody" class="table">
+
+      <!--
         <thead>
           <tr>
             <th>Title</th>
@@ -28,28 +31,32 @@ alias: game
             <th>Game File</th>
           </tr>
         </thead>
+        -->
+
         <tbody>
           {% for game in games %}
-            <tr class="link-row">
-              <td>
+          <div class="card-group">
+            <tr class="card row-cols-2 col-6 bg-dark border-light link-row"> <!--adjustments likely here, closing div could also be the issue-->
+              <td class="title-link">
                 <a href="/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.html" class="game-link">
                   <ul>{{ game.title }}</ul>
                 </a>
               </td>
-              <td>{{ game.developer }}</td>
-              <td>{{ game.datesubmitted }}</td>
-              <td>{{ game.environment }}</td>
+              <td>Developer: {{ game.developer }}</td>
+              <td>Date: {{ game.datesubmitted }}</td>
+              <td>Environment: {{ game.environment }}</td>
               <td>
                 <button class="btn-link-row">
                   <a href="/public/browser_games/{{ game.filename }}.html" download>Download</a>
                 </button>
               </td>
             </tr>
+            </div>
           {% endfor %}
         </tbody>
-      </table>
-    </div>
+    </table>
   </div>
+</div>
 </section>
 
 <!-- Bootstrap JS and jQuery -->
