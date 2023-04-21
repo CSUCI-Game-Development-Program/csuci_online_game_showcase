@@ -52,8 +52,7 @@ alias: game
   </div>
 </section>
 
-<!-- Bootstrap JS and jQuery -->
-
+<!--  Search bar script -->
 <script>
   function searchTable() {
     var input,
@@ -86,50 +85,6 @@ alias: game
           }
         }
       }
-
-// Display only 20 rows at a time
-      if (rowCount >= 15) {
-        for (var k = i + 1; k < tr.length; k++) {
-          tr[k].style.display = "none";
-        }
-        break;
-      }
     }
   }
-
-  document.addEventListener('DOMContentLoaded', function() {
-
-// Show only the first 20 rows of the table
-    const gameTableBodyRows = document.querySelectorAll('#gameTableBody tr');
-    for (let i = 15; i < gameTableBodyRows.length; i++) {
-      gameTableBodyRows[i].style.display = 'none';
-    }
-
-// Add onscroll event listener to window object
-    window.addEventListener('scroll', function() {
-      const showMoreButton = document.getElementById('showMoreButton');
-      if (showMoreButton) {
-        const hiddenRows = document.querySelectorAll('#gameTableBody tr:not([style*="display: table-row"])');
-        if (hiddenRows.length > 0 && window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-          const numToShow = hiddenRows.length > 20
-            ? 20
-            : hiddenRows.length;
-          for (let i = 0; i < numToShow; i++) {
-            hiddenRows[i].style.display = 'table-row';
-          }
-          const buttonText = hiddenRows.length > numToShow
-            ? 'Scroll down'
-            : 'End';
-          showMoreButton.textContent = buttonText;
-        }
-      }
-    });
-
-// Add "Show More" button
-    const showMoreButton = document.createElement('button');
-    showMoreButton.id = 'showMoreButton';
-    showMoreButton.classList.add('btn', 'btn-inv', 'btn-primary');
-    showMoreButton.textContent = 'Scroll';
-    document.querySelector('.list').appendChild(showMoreButton);
-  });
 </script>

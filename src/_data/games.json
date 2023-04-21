@@ -2352,5 +2352,236 @@
       "filename": "ward_endless_nightmare",
       "permission": "yes",
       "link": "https://drive.google.com/file/d/11gJNe93BffiOdSaoskd0USH8RTxZBbKQ/"
+  },
+  {
+    "title": "Fan Invaders",
+    "developer": "Michael Woodson",
+    "description": "It is a reskin of the all-time classic Space Invaders where you play as a celebrity trying to avoid crazed, obsessed fans with “restraining orders” instead of bullets",
+    "instructions": "N/A",
+    "datesubmitted": "Fall 2020",
+    "environment": "GameMaker Studio 2",
+    "filename": "woodson_fan_invaders",
+    "permission": "yes",
+    "link": "https://drive.google.com/file/d/1AHQun84SLqt5B0iqSoB-Mo3KYIwYIZXZ/"
+  },
+  {
+      "title": "MyneSweeper",
+      "developer": "Nicholas Bergendahl",
+      "description": "MyneSweeper is a graphical version of MineSweeper. MineSweeper is one of the most iconic puzzle games that has been around for decades on Windows computers, and I have created a version of the game where you can run up to the MineSweeper squares and clear them by touching them. This is great if you liked the traditional version of MineSweeper and would like to play along with a satirical backstory about the current condition of Laos after the cluster bombing during the Vietnam war.",
+      "instructions": "The rules are very similar to the original Minesweeper. Each number indicates the number of bombs a tile is touching. If there is a tile with no number, it is touching no bombs. You must reach the gold square which represents gold to reach the next level. To flag bombs to remember where you think bombs are, you move into a square for the first time to flag it as a bomb. If you would like to clear the square and reveal a number, you must move into the square a second time. Moving into a square with a bomb will result you restarting the level. There is one beginner level, one intermediate level, and one final level that is just a bit of fun.",
+      "datesubmitted": "Fall 2020",
+      "environment": "PuzzleScript",
+      "filename": "bergendahl_mynesweeper",
+      "permission": "yes",
+      "link": "https://drive.google.com/file/d/1UpoOmT7zFTGv4Cg_wuMC8njlbrEUbnuk/"
+  },
+  {
+      "title": "Flame to a Moth",
+      "developer": "Joseph Cherry",
+      "description": "Are you tired of moths buzzing around you? Do you love fire and puzzles? Get ready for a revolution in gaming technology. You are the flame. Your targets are those annoying moths. Burn them.",
+      "instructions": "Have fun, and remember that “R” restarts the level, and “Z” undoes the last movement",
+      "datesubmitted": "Fall 2020",
+      "environment": "PuzzleScript",
+      "filename": "cherry_flame_to_a_moth",
+      "permission": "yes",
+      "link": "https://drive.google.com/file/d/1CzosF2Nl8kKQulxmb7N2Fk97KuVGsBYY/"
+  },
+  {
+      "title": "Bouncy Ball",
+      "developer": "Maxwell Light",
+      "description": "The objective of the game is to parkour and project the ball in a plastic cup that is located somewhere in the map. Though, the game control mechanics make it extremely challenging for the player by changing the force and direction constantly. The player must time their shot perfectly in regards to the amount of force being used and the direction where the ball must go",
+      "instructions": "Holding down the space bar will constantly change the amount of force being used, and after releasing the space bar will allow the ball to move in the direction with the force that it has been set to.",
+      "datesubmitted": "Spring 2021",
+      "environment": "Unity",
+      "filename": "light_bouncy_ball",
+      "permission": "yes",
+      "link": "https://drive.google.com/file/d/1mJB5ha4d5bo82D7BKqGyAWYgOOq3nA__/"
+  },
+  {
+      "title": "Passage Plus",
+      "developer": "Zhili Wang",
+      "description": "This is a 2d platform version of the life simulation game Passage. The game feature in growth/age of the character, player start as a baby and end with a tomb. The game also simulates the life decision in many ways, the player can decide if he wants to go to college or straight to a job, make a family or stick with single. If the player doesn’t do enough homework, then he won’t be able to pass the College Entrance Exam. The last scene will display the player's total score in the game",
+      "instructions": "N/A",
+      "datesubmitted": "Spring 2021",
+      "environment": "Unity",
+      "filename": "wang_passage_plus",
+      "permission": "yes",
+      "link": "https://drive.google.com/file/d/1fm-aF-jnwUK9lh109Q6qQVAV9jaqSQ6s/"
+  },
+  {
+      "title": "Chorogon Project",
+      "developer": "Joshua Maraun",
+      "description": "In the game, the player plays a dragon moving through the night sky trying to collect coins while avoiding enemy projectiles. The player tries to collect as many coins as possible before the boss spawns where they then need to use their abilities to avoid bursts of projectiles.",
+      "instructions": "N/A",
+      "datesubmitted": "Fall 2021",
+      "environment": "GDevelop",
+      "filename": "maraun_project_chorogon",
+      "permission": "yes",
+      "link": "https://drive.google.com/file/d/1UliNfXG6BcTO-h0uM4flECy8WB2w7cOZ/"
+  },
+  {
+      "title": "SPAM Z!!!",
+      "developer": "Jaspher Celestine Ramos",
+      "description": "The game is a simple 2D pixel adventure wherein you play as a character in a world of monsters. The only goal of the game is to defeat the boss monster, but it’s not as easy as you think!",
+      "instructions": "N/A",
+      "datesubmitted": "Fall 2021",
+      "environment": "GDevelop",
+      "filename": "ramos_spamz!!!",
+      "permission": "yes",
+      "link": "https://drive.google.com/file/d/17X25Wg6vrwmSHyI3yoF3RPC-wOnkw6lT/"
+  },
+  {
+      "title": "Warehouse Adventure",
+      "developer": "Owen White",
+      "description": "In an alternate future, take part in a miraculous adventure using your wit to solve numerous puzzles as you gather resources for your engineering team to use in order to save humanity. After you have gathered enough resources humanity's last chance will escape the wasteland that is earth in a rocket created from your hard work.",
+      "instructions": "The goal of the puzzles is to push and/or pull the component, which spawns on the players first movement, to the location marked with a light blue plus.",
+      "datesubmitted": "Fall 2021",
+      "environment": "PuzzleScript",
+      "filename": "white_warehouse_adventure",
+      "permission": "yes",
+      "link": "https://drive.google.com/file/d/1ptQXu769etRgAT8cY__37xb7owKDpn4Z/"
+  },
+  {
+      "title": "Savior",
+      "developer": "Grant Blair",
+      "description": "In this game you play as an explorer stranded on an island who needs to collect wood to rebuild their ship. You have to be quick or your ship will sink and you’ll be stuck on the island forever.",
+      "instructions": "N/A",
+      "datesubmitted": "Spring 2022",
+      "environment": "Unity",
+      "filename": "blair_savior",
+      "permission": "yes",
+      "link": "https://drive.google.com/file/d/1d1bx8-KJvcu2EQVRlyOWIJqOFd3TE29n/"
+  },
+  {
+      "title": "Cross the Road",
+      "developer": "Andrew Madsen",
+      "description": "You play as a chicken who must cross the road… by any means necessary! Run through the streets of New Yolk in this 2D platformer, and break the streetlights that prevent you from getting to the other side.",
+      "instructions": "N/A",
+      "datesubmitted": "Spring 2022",
+      "environment": "GDevelop",
+      "filename": "madsen_cross_the_road",
+      "permission": "yes",
+      "link": "https://drive.google.com/file/d/1EzSe7RqluLdxVYx2wwhCT4yLWuc5Jxyz/"
+  },
+  {
+      "title": "Godly Penguin",
+      "developer": "Eddie Lovato III",
+      "description": "Godly Penguin is a touching short-story game about a penguin who must find his destiny through jumping and collecting treasures. What truth awaits our penguin?",
+      "instructions": "N/A",
+      "datesubmitted": "Fall 2022",
+      "environment": "GDevelop",
+      "filename": "lovato_iii_godly_penguin",
+      "permission": "yes",
+      "link": "https://drive.google.com/file/d/1ZctnZEgrdRVoshQFMUihyCRrolEcMH_l/"
+  },
+  {
+      "title": "Where's Paris",
+      "developer": "Juliana Villagomez",
+      "description": "You are a traveler from a distant region and have come to find out that Princess Paris is missing. Although you don't know much about her physical appearance you set off on a journey to find her.",
+      "instructions": "Shift = Run Enter = Interact with NPC AWSF = Movement",
+      "datesubmitted": "Fall 2022",
+      "environment": "RPGMaker",
+      "filename": "villagomez_wheres_paris",
+      "permission": "yes",
+      "link": "https://drive.google.com/file/d/1vIAiv8qcFuyYJ6flRWHHIDqjDqiTVr4H/"
+  },
+  {
+    "title": "Personal Game",
+    "developer": "Min Ahn",
+    "datesubmitted": "Fall 2020",
+    "environment": "Unity",
+    "filename": "ahn_personal_game",
+    "link": "https://drive.google.com/file/d/1LlUs2afbUzHl7JHBY6Zd3yvCxKhLhFKu/"
+  },
+  {
+      "title": "Memory Game",
+      "developer": "Natalie Bonomo",
+      "datesubmitted": "Fall 2020",
+      "environment": "Unity",
+      "filename": "bonomo_memory_game",
+      "link": "https://drive.google.com/file/d/12ied_kwNzEoYuifL4Rs7P_dIzLA9OZ0U/"
+  },
+  {
+      "title": "Space Dragon",
+      "developer": "Richie CastleBomber",
+      "datesubmitted": "Fall 2020",
+      "environment": "Unity",
+      "filename": "castlebomber_space_dragon",
+      "link": "https://drive.google.com/file/d/1CJjjmbNkSVVmkaVv6C7jj4xHfgOsNhZI/"
+  },
+  {
+      "title": "Fairies and Fables",
+      "developer": "Jonathan Ginsburg",
+      "datesubmitted": "Fall 2020",
+      "environment": "Unity",
+      "filename": "ginsburg_fairies_and_fables",
+      "link": "https://drive.google.com/file/d/1Pud4bST5pEMsQSRMNwT65R1gxtd8sTBq/"
+  },
+  {
+      "title": "Personal Game",
+      "developer": "Warit Kritalukkul",
+      "datesubmitted": "Fall 2020",
+      "environment": "Unity",
+      "filename": "kritalukkul_personal_game",
+      "link": "https://drive.google.com/file/d/1_S_iBAaM2UrBcIF5hv3owENmnax9vb3z/"
+  },
+  {
+      "title": "Doglite",
+      "developer": "Brandon Mouw",
+      "datesubmitted": "Fall 2020",
+      "environment": "Unity",
+      "filename": "mouw_doglite",
+      "link": "https://drive.google.com/file/d/1Zby2HGShCHYmoEl1dcSvqqAS-KN9aEF7/"
+  },
+  {
+      "title": "I Wanna Be the Clone",
+      "developer": "True Soria",
+      "datesubmitted": "Fall 2020",
+      "environment": "Unity",
+      "filename": "soria_i_wanna_be_the_clone",
+      "link": "https://drive.google.com/file/d/1-Exw3Jgpujm9fePXuIL0xfjkDB2tOsbT/"
+  },
+  {
+      "title": "Personal Game",
+      "developer": "Anthony Sotelo",
+      "datesubmitted": "Fall 2020",
+      "environment": "Unity",
+      "filename": "sotelo_personal_game",
+      "link": "https://drive.google.com/file/d/10QNdSn-N7zHYhVbKu9i_WbrZPYk98tyP/"
+  },
+  {
+      "title": "Personal Game",
+      "developer": "Zhili Wang",
+      "datesubmitted": "Fall 2020",
+      "environment": "Unity",
+      "filename": "wang_personal_game",
+      "link": "https://drive.google.com/file/d/1fm-aF-jnwUK9lh109Q6qQVAV9jaqSQ6s/"
+  },
+  {
+      "title": "BitFender",
+      "developer": "Min Ahn, Natalie Bonomo, Wairt Kritalukkul",
+      "description": "Your system has been invaded by the viruses of the web. Help TroubleShooter fight his way through all the viruses before you’re forced to format your system. Install plugins along the way to power up TroubleShooter!",
+      "datesubmitted": "Fall 2020",
+      "environment": "Unity",
+      "filename": "ahn_bitfender",
+      "link": "https://drive.google.com/file/d/1eX9iqRrK19m7WsZNjaGOf89aHkzZsjUc/"
+  },
+  {
+      "title": "Fairies and Fables",
+      "developer": "Richie CastleBomber, Jonathan Ginsburg",
+      "description": "If you have ever wanted a new, unique card game then Fairies and Fables would suit you well! The game features turn style strategy in which your cards claim areas that are ever turning in possession. Claim the board and you will claim victory.",
+      "datesubmitted": "Fall 2020",
+      "environment": "Unity",
+      "filename": "castlebomber_fairies_and_fables",
+      "link": "https://drive.google.com/file/d/1Bj8U9BZvM60aeBShThmmV0v4txcy7ddw/"
+  },
+  {
+      "title": "Bestiary",
+      "developer": "Anthony Sotelo, True Soria, Zhili Wang",
+      "description": "You survive an endless horde of different enemies by using powers given by four magical masks. Utilize your masks, your cunning, and your agility to prove yourself master of the wilds.",
+      "datesubmitted": "Fall 2020",
+      "environment": "Unity",
+      "filename": "sotelo_bestiary",
+      "link": "https://drive.google.com/file/d/1Xdahdf8NpGIKRWFRXmzVCYHHB5hj4Kgd/"
   }
 ]
