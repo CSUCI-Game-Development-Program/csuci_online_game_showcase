@@ -493,10 +493,17 @@ color: #e51a38;
 
 .game-link {
   text-decoration: none;
+  color: #e51a38;
 }
 
 .center-heading {
   margin: auto;
+}
+
+/* /// CARDS /// */
+
+.card {
+  margin: .5em;
 }
 
 /* Table */

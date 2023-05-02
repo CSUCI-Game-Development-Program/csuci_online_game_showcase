@@ -18,45 +18,32 @@ alias: game
       <br>
     </div>
 
-    <!--Bootstrap 5.0 Cards-->
-      <table id="gameTableBody" class="table">
+    <!--Bootstrap 5.0 Cards
 
-      <!--
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Developer</th>
-            <th>Date</th>
-            <th>Environment</th>
-            <th>Game File</th>
-          </tr>
-        </thead>
+                <td>Developer: {{ game.developer }}</td>
+                <td>Date: {{ game.datesubmitted }}</td>
+                <td>Environment: {{ game.environment }}</td>
+
         -->
-
-        <tbody>
+        <table id="gameTableBody" class="table">
+        <div class="row">
           {% for game in games %}
-          <div class="card-group">
-            <tr class="card row-cols-2 col-6 bg-dark border-light link-row"> <!--adjustments likely here, closing div could also be the issue-->
-              <td class="title-link">
-                <a href="/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.html" class="game-link">
-                  <ul>{{ game.title }}</ul>
-                </a>
-              </td>
-              <td>Developer: {{ game.developer }}</td>
-              <td>Date: {{ game.datesubmitted }}</td>
-              <td>Environment: {{ game.environment }}</td>
-              <td>
-                <button class="btn-link-row">
-                  <a href="/public/browser_games/{{ game.filename }}.html" download>Download</a>
-                </button>
-              </td>
-            </tr>
-            </div>
+           <div class="col-md-4">
+              <div class="card bg-dark border-dark">
+                <div class="card-body">
+              <a href="/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.html" class="game-link">
+              <h5 class="card-title">{{ game.title }}</h5>
+              </a>
+                <p class="card-text">by {{ game.developer }} </p>
+                <p class="card-text"> {{ game.datesubmitted }} </p>
+                <p class="card-text"> {{ game.environment }} </p>
+              <a href="/public/browser_games/{{ game.filename }}.html" download class="gradient-btn">Download</a>
+                </div>
+             </div>
+          </div>
           {% endfor %}
-        </tbody>
-    </table>
-  </div>
-</div>
+          </div>
+          </table>
 </section>
 
 <!-- Bootstrap JS and jQuery -->
