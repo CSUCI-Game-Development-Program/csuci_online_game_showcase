@@ -711,9 +711,10 @@ iframe {
   display: block;
   border: 2px solid var(--clr-primary-500);
   margin: 0 auto;
-  width: 600px;
-  min-height: 600px;
+  width: 1000px;
+  min-height: 500px;
   max-width: 100%;
+  
 }
 
 /* Blog */
@@ -788,3 +789,9 @@ iframe {
    }
 }
 
+/* Carousel image */
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  max-height: 600px;
+}

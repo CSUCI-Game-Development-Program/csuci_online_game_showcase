@@ -21,12 +21,22 @@ permalink: "/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.htm
         by {{ game.developer }}
       </span>
       </div>
+      {% if game.class == "COMP 337" %}
+        <a href="https://catalog.csuci.edu/preview_course_nopop.php?catoid=53&coid=108855" target="_blank">COMP 337 Course Description</a>
+      {% elsif game.class == "COMP 437" %}
+        <a href="https://catalog.csuci.edu/preview_course_nopop.php?catoid=48&coid=97568" target="_blank">COMP 437 Course Description</a>
+      {% endif %}
+    
       <p class="description">
         {{ game.description }}
         <br>
         <br>
         Instructions:
         {{ game.instructions }}
+        <br>
+        <button class="btn-link-row">
+          <a href="{{ game.link }}" download>Download</a>
+        </button>
       </p>
     </div>
     <div class="text-center">
