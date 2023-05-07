@@ -21,13 +21,18 @@ permalink: "/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.htm
         by {{ game.developer }}
       </span>
       </div>
+      <div class="description-container">
       <p class="description">
         {{ game.description }}
         <br>
         <br>
         Instructions:
         {{ game.instructions }}
-      </p>
+        <br>
+        <br>
+        Course:
+        {{ game.course}}
+      </p> 
     </div>
     <div class="text-center">
       {% if pagination.href.previous %}
