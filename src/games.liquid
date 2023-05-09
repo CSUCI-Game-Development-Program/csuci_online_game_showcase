@@ -4,7 +4,12 @@ title: Games
 data: games
 alias: game
 ---
-
+<button class="scrollToTopBtn">
+  <a href="#top" class="showBtn"><img
+      src="../assets/img/white-arrow.png"
+      width="40%"
+      height="40%"></a>
+</button>
 <section class="landing">
   <h2 class="text-center">- Collections -</h2>
   <div class="container row list collections">
@@ -41,7 +46,7 @@ alias: game
               <td>{{ game.environment }}</td>
               <td>
                 <button class="btn-link-row">
-                  <a href="{{ game.link }}" download>Download</a>
+                  <a href="{{ game.link }}" target="_blank">Download</a>
                 </button>
               </td>
             </tr>

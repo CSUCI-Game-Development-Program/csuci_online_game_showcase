@@ -395,20 +395,20 @@ section,
 /* Game Table */
 
 tr.link-row a:hover {
-  color: #e51a38 ;
+  color: #e51a38 !important;
   text-decoration: underline;
   
 }
 
 tr.link-row a {
-  color: white ;
+  color: white !important;
   text-decoration: underline;
 
 }
 
 .btn-link-row {
   background-color: #e51a38 !important;
-  color: #fff;
+  color: #fff !important;
   border-color: #e51a38;
   
 }
@@ -705,14 +705,16 @@ color: #e51a38;
 .iframe-container {
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 iframe {
+  position: relative;
+  overflow: hidden;
   display: block;
-  border: 2px solid var(--clr-primary-500);
   margin: 0 auto;
-  width: 1000px;
-  min-height: 500px;
+  width: 40rem;
+  min-height: 40rem;
   max-width: 100%;
   
 }
@@ -794,4 +796,55 @@ iframe {
   max-width: 100%;
   height: auto;
   max-height: 600px;
+}
+
+/*scroll to top button */
+
+.scrollToTopBtn {
+  background-color: none;
+  border: none;
+  color: none;
+  cursor: pointer;
+  font-size: 60px;
+  line-height: 48px;
+  width: 10%;
+  background-color: transparent !important;
+  font-style: normal !important;
+
+/* Position and Movement of button*/
+  position: fixed;
+  bottom: 50%;
+  left: 4rem;
+  z-index: 100;
+  opacity: 1;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
+}
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+  color: white;
+}
+/* Hide button when screen is too small */
+@media (max-width: 768px) {
+  .scrollToTopBtn {
+    display: none;
+  }
+}
+
+.game-image{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    width: 50rem;
+    min-height: 25rem;
+    max-width: 100%;
+    
+  }
+.game-info a:any-link{
+  color: #fff;
+}
+.game-info a:hover{
+  color:#e51a38 !important;
 }

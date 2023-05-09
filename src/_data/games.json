@@ -12,18 +12,6 @@
         "class": "COMP 337"
     },
     {
-        "title": "A Gentleman’s Game",
-        "developer": "James Bunyard",
-        "description": "A Gentleman’s game tells the story of a friendly suburban squirrel that is stuck in between many forces. The squirrel’s home is being threatened by the new expansion of the local golf course. Bulldozers are destroying the trees that the squirrel uses for survival to make way for long green fairways and poorly managed invasive species of grass. Help the squirrel navigate through the golf course, and collect ten golf balls to pay some other furry allies to help stop the expansion!",
-        "instructions": "Use the arrow keys to move around, and explore your environment",
-        "datesubmitted": "Fall 2020",
-        "environment": "Bitsy",
-        "filename": "N/A",
-        "permission": "yes",
-        "link": "N/A",
-        "class": "COMP 337"
-    },
-    {
         "title": "Errand Boy",
         "developer": "Luis Chavez",
         "description": "The game is about a young boy who has taken a job working for a man called Boss, the boy does some fetch quest for him. As you continue to do the errands for him you have a sinking feeling the people in the neighborhood don’t really trust your boss. Maybe some people know more about Boss that might shed some light into this?",
@@ -69,18 +57,6 @@
         "filename": "maxwell_cave_diver",
         "permission": "yes",
         "link": "https://drive.google.com/file/d/1UrWTMO6YA8osWPDNt5uYMaudnt9thvdP/",
-        "class": "COMP 337"
-    },
-    {
-        "title": "Jabari",
-        "developer": "Jalen Moody",
-        "description": "The game center on a young boy in Africa named Jabari, who after a falling out with his little brother, Umba, has to go on a rescue mission to find his brother in the great African Grasslands. All matter of creature can be found here. Lions, Elephants, Giraffes, Black Mambas, and even mosquitos each equally as deadly as the other, but no matter what, you must bring your little brother home, and tell him your sorry and you love him, before it’s too late.",
-        "instructions": "As a whole, in my game you must do three things, one is memorization, it requires you to use your head and really think about where you’ve been. Second, follow all the rules. It’s the only way to experience this game probably. Third and finally, you actually have a few options in gameplay, so also play the way you would like to play. ",
-        "datesubmitted": "Fall 2020",
-        "environment": "Bitsy",
-        "filename": "N/A",
-        "permission": "yes",
-        "link": "N/A",
         "class": "COMP 337"
     },
     {
@@ -2532,18 +2508,6 @@
         "class": "COMP 337"
     },
     {
-        "title": "A Vacation Trip",
-        "developer": "Juliana Villagomez",
-        "description": "Your name is Juliana (A.K.A, Jukie) and your 21st birthday is to come within the next month and you have just bought a plane ticket to Germany, with the intention of going on a solo trip. You want to be independent. You must be able to break the news to your strict parents and avoid the bad ending.",
-        "instructions": "N/A",
-        "datesubmitted": "Fall 2022",
-        "environment": "Twine",
-        "filename": "N/A",
-        "permission": "yes",
-        "link": "N/A",
-        "class": "COMP 337"
-    },
-    {
         "title": "Escape Room",
         "developer": "Sergio Viramontes",
         "description": "The game is about a man named Frank Smith who plays a series of games. Each consists of trivia questions or puzzles to solve and if you mess up during the game you might end up losing your life",
@@ -2730,15 +2694,6 @@
         "class": "COMP 437"
     },
     {
-        "title": "Space Dragon",
-        "developer": "Richie CastleBomber",
-        "datesubmitted": "Fall 2020",
-        "environment": "Unity",
-        "filename": "castlebomber_space_dragon",
-        "link": "https://drive.google.com/file/d/1CJjjmbNkSVVmkaVv6C7jj4xHfgOsNhZI/",
-        "class": "COMP 437"
-    },
-    {
         "title": "Fairies and Fables",
         "developer": "Jonathan Ginsburg",
         "datesubmitted": "Fall 2020",
@@ -2772,15 +2727,6 @@
         "environment": "Unity",
         "filename": "soria_i_wanna_be_the_clone",
         "link": "https://drive.google.com/file/d/1-Exw3Jgpujm9fePXuIL0xfjkDB2tOsbT/",
-        "class": "COMP 437"
-    },
-    {
-        "title": "Personal Game",
-        "developer": "Anthony Sotelo",
-        "datesubmitted": "Fall 2020",
-        "environment": "Unity",
-        "filename": "sotelo_personal_game",
-        "link": "https://drive.google.com/file/d/10QNdSn-N7zHYhVbKu9i_WbrZPYk98tyP/",
         "class": "COMP 437"
     },
     {
