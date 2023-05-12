@@ -11,7 +11,7 @@ permalink: "/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.htm
   <div class="section container">
     {% if game.environment == "Bitsy" or game.environment == "Twine" or game.environment == "PuzzleScript" %}
       <div class="iframe-container">
-        <iframe src="../browser_games/{{ game.filename }}.html" title="{{ game.title }}"></iframe>
+        <iframe src="../assets/browser_games/{{ game.filename }}.html" title="{{ game.title }}"></iframe>
         <br>
         <p>To start playing, click the game then press space bar.</p>
       </div>
