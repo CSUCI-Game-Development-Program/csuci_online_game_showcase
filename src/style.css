@@ -685,7 +685,61 @@ tr.link-row a {
    }
 }
 
-.grid-container {
+/*scroll to top button */
+
+.scrollToTopBtn {
+  background-color: none;
+  border: none;
+  color: none;
+  cursor: pointer;
+  font-size: 60px;
+  line-height: 48px;
+  width: 10%;
+  background-color: transparent !important;
+  font-style: normal !important;
+
+/* Position and Movement of button*/
+  position: fixed;
+  bottom: 50%;
+  left: 4rem;
+  z-index: 100;
+  opacity: 1;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
+}
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+  color: white;
+}
+/* Hide button when screen is too small */
+@media (max-width: 768px) {
+  .scrollToTopBtn {
+    display: none;
+  }
+}
+/* screenshots of game */
+.game-image{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    width: 50rem;
+    min-height: 25rem;
+    max-width: 100%;
+    
+  }
+/* games list and cards styles */
+.game-info a:any-link{
+  color: #fff;
+}
+.game-info a:hover{
+  color:#e51a38 !important;
+}
+.card {
+  margin: .5em;
+}
+.card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
