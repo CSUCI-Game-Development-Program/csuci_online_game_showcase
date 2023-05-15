@@ -9,38 +9,57 @@ permalink: "/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.htm
 ---
 <section class="landing custom-drk">
   <div class="section container">
-    <div class="iframe-container">
-      <iframe
-        src="../browser_games/{{ game.filename }}.html"
-        title="{{ game.title }}"></iframe>
-        </div>
-      <br>
-      <div class="name-and-author">
+    {% if game.environment == "Bitsy" or game.environment == "Twine" or game.environment == "PuzzleScript" %}
+      <div class="iframe-container">
+        <iframe src="../assets/browser_games/{{ game.filename }}.html" title="{{ game.title }}"></iframe>
+        <br>
+        <p>To start playing, click the game then press space bar.</p>
+      </div>
+    {% else %}
+      <div class="game-image">
+        <img src="../assets/img/game_captures/{{ game.filename }}.png">
+      </div>
+    {% endif %}
+    <br>
+    <div class="name-and-author">
       <h1 class="game-name">{{ game.title }}</h1>
       <span class="student-name">
         by {{ game.developer }}
       </span>
-      </div>
-      <div class="description-container">
-      <p class="description">
-        {{ game.description }}
+    </div>
+    <div class="game-info">
+      {% if game.class == "COMP 337" %}
+        Course:
+        <a href="https://catalog.csuci.edu/preview_course_nopop.php?catoid=53&coid=108855" target="_blank">COMP 337</a>
+      {% elsif game.class == "COMP 437" %}
+        Course:
+        <a href="https://catalog.csuci.edu/preview_course_nopop.php?catoid=48&coid=97568" target="_blank">COMP 437</a>
+      {% endif %}
+      {% if game.instructions != "N/A" and game.instructions %}
         <br>
         <br>
         Instructions:
         {{ game.instructions }}
+    {% else %}
+      {% endif %}
+      <br>
+      <br>
+      {% if game.description != "N/A" and game.description %}
+        Description: {{ game.description }}
         <br>
         <br>
-        Course:
-        {{ game.class}}
-      </p> 
-    </div>
-    <div class="text-center">
-      {% if pagination.href.previous %}
-        <a class="neon-button" href="{{ pagination.href.previous }}">Previous</a>
+    {% else %}
       {% endif %}
-      {% if pagination.href.next %}
-        <a class="neon-button" href="{{ pagination.href.next }}">Next</a>
-      {% endif %}
-    </div>
+      <button class="btn-link-row">
+        <a href="{{ game.link }}" target="_blank">Download</a>
+      </button>
+  </div>
+  <div class="text-center">
+    {% if pagination.href.previous %}
+      <a class="neon-button" href="{{ pagination.href.previous }}">Previous</a>
+    {% endif %}
+    {% if pagination.href.next %}
+      <a class="neon-button" href="{{ pagination.href.next }}">Next</a>
+    {% endif %}
   </div>
 </section>
