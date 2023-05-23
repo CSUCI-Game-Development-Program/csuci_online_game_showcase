@@ -408,7 +408,7 @@ tr.link-row a {
 
 .btn-link-row {
   background-color: #e51a38 !important;
-  color: #fff !important;
+  color: #fff;
   border-color: #e51a38;
   
 }
@@ -670,6 +670,19 @@ color: #e51a38;
   text-decoration: none;
 }
 
+a.game-link {
+  color: white;
+  text-decoration: underline;
+}
+
+a.game-link :hover{
+  color:red;
+}
+
+button.btn-link-row{
+  color: #fff;
+}
+
 .center-heading {
   margin: auto;
 }
@@ -831,7 +844,7 @@ iframe {
     display: none;
   }
 }
-
+/* screenshots of game */
 .game-image{
     position: relative;
     overflow: hidden;
@@ -842,9 +855,59 @@ iframe {
     max-width: 100%;
     
   }
+/* games list and cards styles */
 .game-info a:any-link{
   color: #fff;
 }
 .game-info a:hover{
   color:#e51a38 !important;
+}
+.card {
+  margin: .5em;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  color: transparent;
+}
+
+.card {
+  background-color: rgba(33,37,41);
+  padding: 20px;
+  color: #fff;
+}
+
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.25rem;
+}
+
+
+.card p {
+  font-size: 1rem; 
+}
+
+
+/* Adjusting font sizes for smaller screens */
+
+@media (max-width: 48rem) {
+  .card p {
+    font-size: 0.875rem; 
+  }
+}
+
+@media (max-width: 30rem) {
+  .card p {
+    font-size: 0.75rem;
+  }
+}
+
+.btn-link-row a:hover{
+  color: red;
+}
+.button a:hover {
+  color: red;
 }

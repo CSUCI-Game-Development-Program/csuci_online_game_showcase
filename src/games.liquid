@@ -1,18 +1,20 @@
 ---
-layout: base.liquid  
+layout: base.liquid
 title: Games
 data: games
 alias: game
 ---
 <button class="scrollToTopBtn">
-  <a href="#top" class="showBtn"><img
+  <a href="#top" class="showBtn">
+    <img
       src="../assets/img/white-arrow.png"
       width="40%"
-      height="40%"></a>
+      height="40%">
+  </a>
 </button>
 <section class="landing">
   <h2 class="text-center">- Collections -</h2>
-  <div class="container row list collections">
+  <div class="container row">
     <div class="col-md-4">
       <input
         type="text"
@@ -21,9 +23,25 @@ alias: game
         onkeyup="searchTable()"
         placeholder="Search...">
       <br>
+      <button id="toggleViewBtn" onclick="toggleView()">Toggle View</button>
     </div>
     <div class="col-md-12">
-      <table id="gameTableBody" class="table">
+      <div id="cardGridView" class="card-grid">
+        {% for game in games %}
+          <div class="card">
+            <a href="/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.html" class="game-link">
+              {{ game.title }}
+            </a>
+            <p>Developer: {{ game.developer }}
+              Date: {{ game.datesubmitted }}
+              Environment: {{ game.environment }}</p>
+            <a href="{{ game.link }}" target="_blank">
+              <button class="btn-link-row">Download</button>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+      <table id="gameTableView" class="table">
         <thead>
           <tr>
             <th>Title</th>
@@ -45,9 +63,9 @@ alias: game
               <td>{{ game.datesubmitted }}</td>
               <td>{{ game.environment }}</td>
               <td>
-                <button class="btn-link-row">
-                  <a href="{{ game.link }}" target="_blank">Download</a>
-                </button>
+                <a href="{{ game.link }}" target="_blank">
+                  <button class="btn-link-row">Download</button>
+                </a>
               </td>
             </tr>
           {% endfor %}
@@ -57,11 +75,16 @@ alias: game
   </div>
 </section>
 
-<!--  Search bar script -->
+<!-- Search bar script -->
 <script>
   function searchTable() {
     var input,
       filter,
+      cardGrid,
+      card,
+      cardTitle,
+      cardDeveloper,
+      cardTable,
       table,
       tr,
       td,
@@ -71,25 +94,64 @@ alias: game
 
     input = document.getElementById("searchInput");
     filter = input.value.toUpperCase();
-    table = document.getElementById("gameTableBody");
-    tr = table.getElementsByTagName("tr");
+    cardGrid = document.getElementById("cardGridView");
+    card = cardGrid.getElementsByClassName("card");
+    cardTable = document.getElementById("gameTableView");
+    table = cardTable.getElementsByTagName("tr");
     rowCount = 0;
 
-// Loop through all table rows, and hide those that don't match the search query
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td");
+// Loop through card grid and hide/show cards based on search query
+    for (i = 0; i < card.length; i++) {
+      cardTitle = card[i].querySelector(".game-link");
+      cardDeveloper = card[i].querySelector("p:nth-child(2)");
+      txtValue = cardTitle.textContent || cardTitle.innerText;
+      txtValue += cardDeveloper.textContent || cardDeveloper.innerText;
+
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        card[i].style.display = "";
+      } else {
+        card[i].style.display = "none";
+      }
+    }
+
+// Loop through table rows and hide/show rows based on search query
+    for (i = 0; i < table.length; i++) {
+      td = table[i].getElementsByTagName("td");
       for (var j = 0; j < td.length; j++) {
         if (td[j]) {
           txtValue = td[j].textContent || td[j].innerText;
           if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
+            table[i].style.display = "";
             rowCount++;
             break;
           } else {
-            tr[i].style.display = "none";
+            table[i].style.display = "none";
           }
         }
       }
+    }
+
+// Show "No results" message if no matching rows or cards found
+    var noResultsMsg = document.getElementById("noResultsMsg");
+    if (rowCount === 0) {
+      noResultsMsg.style.display = "block";
+    } else {
+      noResultsMsg.style.display = "none";
+    }
+  }
+
+  function toggleView() {
+    var cardGridView = document.getElementById("cardGridView");
+    var tableView = document.getElementById("gameTableView");
+    var toggleBtn = document.getElementById("toggleViewBtn");
+    if (cardGridView.style.display === "none") {
+      cardGridView.style.display = "grid";
+      tableView.style.display = "none";
+      toggleBtn.innerText = "List View";
+    } else {
+      cardGridView.style.display = "none";
+      tableView.style.display = "table";
+      toggleBtn.innerText = "Card Grid";
     }
   }
 </script>
