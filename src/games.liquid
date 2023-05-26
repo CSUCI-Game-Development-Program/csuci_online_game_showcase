@@ -15,33 +15,48 @@ alias: game
 <section class="landing">
   <h2 class="text-center">- Collections -</h2>
   <div class="container row">
-    <div class="col-md-4">
+    <div id="tools" class="col-md-4 tools-container">
       <input
         type="text"
         class="form-control"
         id="searchInput"
         onkeyup="searchTable()"
         placeholder="Search...">
-      <br>
-      <button id="toggleViewBtn" onclick="toggleView()">Toggle View</button>
     </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4 toggle">
+      <button id="toggleViewBtn" onclick="toggleView()">Toggle List</button>
+    </div>
+
+
     <div class="col-md-12">
       <div id="cardGridView" class="card-grid">
         {% for game in games %}
           <div class="card">
-            <a href="/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.html" class="game-link">
-              {{ game.title }}
-            </a>
+            <h4>
+              <a href="/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.html" class="game-link">
+                {{ game.title }}
+              </a>
+            </h4>
+            <br>
+            <img src="../assets/game_screenshots/{{ game.filename }}.png">
+            <br>
             <p>Developer: {{ game.developer }}
+              <br>
               Date: {{ game.datesubmitted }}
+              <br>
               Environment: {{ game.environment }}</p>
+            <br>
             <a href="{{ game.link }}" target="_blank">
               <button class="btn-link-row">Download</button>
             </a>
           </div>
         {% endfor %}
       </div>
-      <table id="gameTableView" class="table">
+      <table
+        id="gameTableView"
+        class="table"
+        style="display: none;">
         <thead>
           <tr>
             <th>Title</th>
@@ -56,7 +71,7 @@ alias: game
             <tr class="link-row">
               <td>
                 <a href="/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.html" class="game-link">
-                  <ul>{{ game.title }}</ul>
+                  {{ game.title }}
                 </a>
               </td>
               <td>{{ game.developer }}</td>
@@ -144,6 +159,7 @@ alias: game
     var cardGridView = document.getElementById("cardGridView");
     var tableView = document.getElementById("gameTableView");
     var toggleBtn = document.getElementById("toggleViewBtn");
+
     if (cardGridView.style.display === "none") {
       cardGridView.style.display = "grid";
       tableView.style.display = "none";
@@ -154,4 +170,15 @@ alias: game
       toggleBtn.innerText = "Card Grid";
     }
   }
+
+// Set the initial view to card grid
+  window.onload = function() {
+    var cardGridView = document.getElementById("cardGridView");
+    var tableView = document.getElementById("gameTableView");
+    var toggleBtn = document.getElementById("toggleViewBtn");
+
+    cardGridView.style.display = "grid";
+    tableView.style.display = "none";
+    toggleBtn.innerText = "List View";
+  };
 </script>

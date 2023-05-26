@@ -911,3 +911,17 @@ iframe {
 .button a:hover {
   color: red;
 }
+
+/* div spacing for lists, search bar, button*/
+
+#tools {
+  margin-bottom: 20px;
+}
+
+#cardGridView, #gameTableView {
+  margin-bottom: 20px;
+}
+
+#toggleViewBtn {
+  float: right;
+}
