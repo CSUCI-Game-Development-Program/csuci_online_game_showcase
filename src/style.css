@@ -516,10 +516,34 @@ color: #e51a38;
   margin-left: 5em;
 }
 
+.gradient-btn-ii {
+  display: inline-block;
+  padding: 1em 2em;
+  color: var(--clr-neutral-100);
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 0.678rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(to right, rgba(178, 135, 111, 0) 25%, #fff 75%);
+  background-position: 1% 50%;
+  background-size: 400% 300%;
+  /*border: 1px solid white;*/
+  transition: 700ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  align-self: start;
+  justify-self: start;
+}
+
 /*/// COLLECTIONS - GAME LANDING ///*/
 
-.collections{
+.collections {
   padding-bottom: 3em;
+}
+
+.form-control {
+  margin-top: 2em;
 }
 
 .landing {
@@ -581,6 +605,7 @@ tr.link-row a {
   color: #fff;
   border-color: #e51a38;
   text-decoration: none;
+  margin-top: .7em;
 }
 
 .btn-link-row:hover, .btn-link-row a:hover {
@@ -726,13 +751,6 @@ iframe {
    }
 }
 
-/* Carousel image */
-.carousel-item img {
-  max-width: 100%;
-  height: auto;
-  max-height: 600px;
-}
-
 /*scroll to top button */
 
 .scrollToTopBtn {
@@ -748,24 +766,26 @@ iframe {
 
 /* Position and Movement of button*/
   position: fixed;
-  bottom: 50%;
-  left: 4rem;
+  bottom: 15%;
+  left: 5em;
   z-index: 100;
   opacity: 1;
-  transform: translateY(100px);
-  transition: all 0.5s ease;
+
 }
 .showBtn {
   opacity: 1;
   transform: translateY(0);
   color: white;
 }
+
 /* Hide button when screen is too small */
 @media (max-width: 768px) {
   .scrollToTopBtn {
     display: none;
   }
 }
+/* screenshots of game */
+
 .game-image{
     position: relative;
     overflow: hidden;
@@ -776,9 +796,169 @@ iframe {
     max-width: 100%;
     
   }
+
+/* games list and cards styles */
 .game-info a:any-link{
   color: #fff;
 }
 .game-info a:hover{
   color:#e51a38 !important;
 }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  color: transparent;
+}
+
+.card {
+  background-color: rgba(33,37,41);
+  padding: 20px;
+  color: #fff;
+}
+
+.card p {
+  line-height: 2em;
+}
+
+
+
+
+
+/* Adjusting font sizes for smaller screens */
+
+@media (max-width: 48rem) {
+  .card p {
+    font-size: 0.875rem; 
+  }
+}
+
+@media (max-width: 30rem) {
+  .card p {
+    font-size: 0.75rem;
+  }
+}
+
+.btn-link-row a:hover{
+  color: red;
+}
+.button a:hover {
+  color: red;
+}
+
+/* YOUTUBE GRID */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.grid-item {
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* REVIEW CARDS */
+
+
+.review-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review-card {
+  width: 500px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.review-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.review-card h2 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.review-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.review-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #e51a38;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: .75rem;
+  letter-spacing: 1px;
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+      box-shadow: 0 0 5px #ff0000;
+  }
+  50% {
+      box-shadow: 0 0 20px #ff0000;
+  }
+  100% {
+      box-shadow: 0 0 5px #ff0000;
+  }
+}
+
+.review-card a:hover {
+  background-color: #e51a38;
+}
+
+.yt-heading {
+  margin-bottom: 1em;
+}
+
+/*PAGINATION*/
+
+.pagination {
+  margin-top: 3em;
+}
+
+.custom-pagination .page-item .page-link {
+  background-color: hsla(0, 0%, 10%, 1);
+  color: #fff;
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: none;
+  border-color: #fff;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.custom-pagination a:active {
+  border-color: none;
+}
+
+.custom-pagination a:hover:not(.active) {
+  border-color: #666;
+  transition: .3s;
+}
+
+
+
+
+
