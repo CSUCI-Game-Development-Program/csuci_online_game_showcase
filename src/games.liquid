@@ -4,14 +4,6 @@ title: Games
 data: games
 alias: game
 ---
-<button class="scrollToTopBtn">
-  <a href="#top" class="showBtn">
-    <img
-      src="../assets/img/white-arrow.png"
-      width="40%"
-      height="40%">
-  </a>
-</button>
 <section class="landing">
   <h2 class="text-center">- Collections -</h2>
   <div class="container row">
@@ -23,17 +15,23 @@ alias: game
         onkeyup="searchTable()"
         placeholder="Search...">
       <br>
-      <button id="toggleViewBtn" onclick="toggleView()">Toggle View</button>
+      <button id="toggleViewBtn" onclick="toggleView()" class="gradient-btn-ii">List View</button>
     </div>
+
+<!-- CARDS -->
+
+    <div id="cardContainer">
     <div class="col-md-12">
       <div id="cardGridView" class="card-grid">
-        {% for game in games %}
+        {% for game in games | slice: 2, 6 %}
           <div class="card">
             <a href="/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.html" class="game-link">
               {{ game.title }}
             </a>
-            <p>Developer: {{ game.developer }}
+          <p>Developer: {{ game.developer }}
+              <br>
               Date: {{ game.datesubmitted }}
+              <br>
               Environment: {{ game.environment }}</p>
             <a href="{{ game.link }}" target="_blank">
               <button class="btn-link-row">Download</button>
@@ -73,7 +71,10 @@ alias: game
       </table>
     </div>
   </div>
+</div>
 </section>
+
+<button id="scrollToTopBtn" title="Scroll to Top">Top</button>
 
 <!-- Search bar script -->
 <script>
@@ -154,4 +155,21 @@ alias: game
       toggleBtn.innerText = "Card Grid";
     }
   }
+</script>
+
+<script>
+
+window.addEventListener('scroll', function() {
+  var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  if (window.pageYOffset > 100) {
+    scrollToTopBtn.style.display = 'block';
+  } else {
+    scrollToTopBtn.style.display = 'none';
+  }
+});
+
+document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 </script>
