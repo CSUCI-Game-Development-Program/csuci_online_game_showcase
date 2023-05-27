@@ -54,7 +54,7 @@ permalink: "/games/{{ game.title | slugify }}-{{ game.developer | slugify }}.htm
         <a href="{{ game.link }}" target="_blank">Download</a>
       </button>
   </div>
-  <div class="text-center">
+  <div class="text-center prevnext">
     {% if pagination.href.previous %}
       <a class="neon-button" href="{{ pagination.href.previous }}">Previous</a>
     {% endif %}

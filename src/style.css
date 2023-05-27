@@ -392,48 +392,7 @@ section,
   }
 }
 
-/* Game Table */
-
-tr.link-row a:hover {
-  color: #e51a38 !important;
-  text-decoration: underline;
-  
-}
-
-tr.link-row a {
-  color: white !important;
-  text-decoration: underline;
-
-}
-
-.btn-link-row {
-  background-color: #e51a38 !important;
-  color: #fff !important;
-  border-color: #e51a38;
-  
-}
-
-.btn-link-row:hover, .btn-link-row a:hover {
-  background-color: #fff !important;
-  color: #e51a38 !important;
-  border-color: #fff;
-}
-
-/* Scroll to Top */
-
-.btn-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-}
-
-.btn-inv {
-  color: var(--clr-neutral-100);
-}
-
-
-/* ////Buttons///// */
+/* ////Main Buttons///// */
 
 .btn-primary, .btn-primary:visited {
   background-color: #e51a38 !important;
@@ -571,14 +530,30 @@ color: #e51a38;
   margin: auto;
 }
 
-/* /// CARDS /// */
+/*Scroll to Top Button */
 
-.card {
-  margin: .5em;
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: rgba(33,37,41);
+  color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #555;
 }
 
 
-/* Table */
+/* COLLECTIONS - LIST TABLE */
 
 .table, .table:link {
   color: #fff !important;
@@ -614,18 +589,62 @@ tr.link-row a {
   border-color: #fff;
 }
 
-/* Scroll to Top */
-
-.btn-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
+@media (max-width: 600px) {
+  .btn-link-row {
+    font-size: 14px;
+  }
 }
 
-.btn-inv {
-  color: var(--clr-neutral-100);
+@media (max-width: 400px) {
+  .btn-link-row {
+    font-size: 12px;
+  }
 }
+
+/* /// COLLECTIONS - CARDS /// */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  color: transparent;
+}
+
+.card {
+  background-color: rgba(33,37,41);
+  padding: 20px;
+  color: #fff;
+  margin: .5em;
+}
+
+.card p {
+  line-height: 2em;
+}
+
+@media (max-width: 48rem) {
+  .card p {
+    font-size: 0.875rem; 
+  }
+}
+
+@media (max-width: 30rem) {
+  .card p {
+    font-size: 0.75rem;
+  }
+}
+
+/* Screenshots of Game */
+
+.game-image{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    width: 50rem;
+    min-height: 25rem;
+    max-width: 100%;
+    
+  }
 
 /*/// INDIVIDUAL GAME PAGES ///*/
 
@@ -677,6 +696,17 @@ iframe {
   min-height: 40rem;
   max-width: 100%;
   
+}
+
+.game-info a:any-link{
+  color: #fff;
+}
+.game-info a:hover{
+  color:#e51a38 !important;
+}
+
+.prevnext {
+  margin-top: 1em;
 }
 
 /*/// BLOG ///*/
@@ -751,118 +781,7 @@ iframe {
    }
 }
 
-/*scroll to top button */
-
-.scrollToTopBtn {
-  background-color: none;
-  border: none;
-  color: none;
-  cursor: pointer;
-  font-size: 60px;
-  line-height: 48px;
-  width: 10%;
-  background-color: transparent !important;
-  font-style: normal !important;
-
-/* Position and Movement of button*/
-  position: fixed;
-  bottom: 15%;
-  left: 5em;
-  z-index: 100;
-  opacity: 1;
-
-}
-.showBtn {
-  opacity: 1;
-  transform: translateY(0);
-  color: white;
-}
-
-/* Hide button when screen is too small */
-@media (max-width: 768px) {
-  .scrollToTopBtn {
-    display: none;
-  }
-}
-/* screenshots of game */
-
-.game-image{
-    position: relative;
-    overflow: hidden;
-    display: block;
-    margin: 0 auto;
-    width: 50rem;
-    min-height: 25rem;
-    max-width: 100%;
-    
-  }
-
-/* games list and cards styles */
-.game-info a:any-link{
-  color: #fff;
-}
-.game-info a:hover{
-  color:#e51a38 !important;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  color: transparent;
-}
-
-.card {
-  background-color: rgba(33,37,41);
-  padding: 20px;
-  color: #fff;
-}
-
-.card p {
-  line-height: 2em;
-}
-
-
-
-
-
-/* Adjusting font sizes for smaller screens */
-
-@media (max-width: 48rem) {
-  .card p {
-    font-size: 0.875rem; 
-  }
-}
-
-@media (max-width: 30rem) {
-  .card p {
-    font-size: 0.75rem;
-  }
-}
-
-.btn-link-row a:hover{
-  color: red;
-}
-.button a:hover {
-  color: red;
-}
-
-/* YOUTUBE GRID */
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
-
-.grid-item {
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-
-/* REVIEW CARDS */
-
+/* YT REVIEW CARDS */
 
 .review-container {
   display: flex;
